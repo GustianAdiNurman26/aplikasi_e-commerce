@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Optimasi Visual Final:
+    1. Elevation 6dp memberikan efek bayangan yang dalam agar kartu terlihat melayang.
+    2. Stroke 1dp memberikan garis tepi yang tajam dan rapi.
+    3. Corner Radius 20dp memberikan kesan modern dan premium.
+-->
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="6dp"
+    app:cardMaxElevation="10dp"
+    app:strokeColor="@color/stroke_color"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"> <!-- Background kartu putih agar kontras dengan bg_light aplikasi -->
+
+        <!-- Container Gambar Produk -->
+        <ImageView
+            android:id="@+id/ivProduk"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:background="@color/white"
+            android:src="@drawable/sepatulari" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Judul Produk dengan warna teks utama yang tegas -->
+            <TextView
+                android:id="@+id/tvNamaProduk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Produk"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_main"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <!-- Harga Produk dengan warna brand primary -->
+            <TextView
+                android:id="@+id/tvHargaProduk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rp 0"
+                android:textSize="16sp"
+                android:textColor="@color/price_color"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+
+            <!-- Row Rating -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="6dp">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@android:drawable/btn_star_big_on"
+                    app:tint="#FFC107" />
+
+                <TextView
+                    android:id="@+id/tvRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.8"
+                    android:textSize="13sp"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@color/text_secondary" />
+            </LinearLayout>
+
+            <!-- Tombol Tambah: Ukuran lebih besar agar nyaman ditekan di Samsung A05 -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTambah"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="14dp"
+                android:text="Tambah"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:cornerRadius="14dp"
+                android:backgroundTint="@color/primary_blue"
+                android:textColor="@color/white"
+                app:elevation="2dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

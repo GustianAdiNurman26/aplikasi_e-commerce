@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Menggunakan NoActionBar untuk menghilangkan Double Toolbar pada Katalog Produk -->
+    <style name="Theme.Kelompok" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <!-- 1. Identitas Brand (Biru Modern) -->
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- 2. Warna Aksen untuk Komponen Material -->
+        <item name="colorSecondary">@color/primary_blue</item>
+        <item name="colorSecondaryVariant">@color/primary_dark</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- 3. Eksekusi Background Modern Soft Gray -->
+        <!-- Membuat kartu produk putih (#FFFFFF) terlihat 'menyala' dan menonjol -->
+        <item name="android:windowBackground">@color/bg_light</item>
+
+        <!-- 4. Penyesuaian Bar Sistem (Samsung A05) -->
+        <!-- Membuat area jam/baterai berwarna biru agar menyatu dengan aplikasi -->
+        <item name="android:statusBarColor">@color/primary_blue</item>
+        <item name="android:navigationBarColor">@color/white</item>
+
+        <!-- 5. Optimasi UI/UX -->
+        <item name="elevation">0dp</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+</resources>
